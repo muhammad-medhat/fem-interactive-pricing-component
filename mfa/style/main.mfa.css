@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+:root {
+  --SoftCyan: hsl(174, 77%, 80%) /* (Full Slider Bar);*/;
+  --StrongCyan: hsl(174, 86%, 45%) /*(Slider Backround);*/;
+  --LightGrayishRed: hsl(14, 92%, 95%) /*Discount Background);*/;
+  --LightRed: hsl(15, 100%, 70%) /*(Discount Text);*/;
+  --PaleBlue: hsl(226, 100%, 87%) /*(CTA Text)*/;
+  --White: hsl(0, 0%, 100%);
+  --VeryPaleBlue: hsl(230, 100%, 99%);
+
+  --VeryLightGrayishBlue: hsl(224, 65%, 95%) /*(Empty Slider Bar)*/;
+  --LightGrayishBlue: hsl(223, 50%, 87%) /*(Empty Slider Bar);*/;
+  --GrayishBlue: hsl(225, 20%, 60%) /*(Toggle Background);*/;
+  --DarkDesaturatedBlue: hsl(227, 35%, 25%) /*(Text & CTA Background);*/;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.mob {
+  /* color: red;
+  font-weight: bold; */
+}
+.desktop {
+  /* color: green;
+  font-weight: bold; */
+  /* border: solid red; */
+  display: none;
+}
+/******* new styles **************************/
+main {
+  padding-top: 12em;
+  gap: 8em;
+}
+header h2 {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  padding-bottom: 0.6em;
+}
+.disc {
+  font-size: 1.8em;
+}
+/*****************************************/
+.container {
+  background-image: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  color: var(--DarkDesaturatedBlue);
+}
+.container header.title {
+  background-image: url("../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* padding-top: 10vh; */
+}
+.container .card {
+  background-color: var(--White);
+  box-shadow: 0 5px 20px hsla(0, 0%, 0%, 0.2);
+  border-radius: 7px;
+  padding: 2em;
+  margin: 2em;
+}
+.container .card .packages,
+.container .card .price {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  color: var(--GrayishBlue);
+  min-width: 80vw;
+}
+
+.container .card .price .num {
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--DarkDesaturatedBlue);
+}
+.container .card .num:before {
+  content: "$";
+}
+.container .card button {
+  color: var(--PaleBlue);
+  background-color: var(--DarkDesaturatedBlue);
+  border-radius: 40px;
+  padding: 10px 40px;
+  margin: auto;
+  cursor: pointer;
+}
+.container .card button:hover {
+  background: transparent;
+  color: var(--DarkDesaturatedBlue);
+}
+.container .card .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 40px;
+}
+.container .card .toggle .checkbox {
+  display: none;
+}
+.container .card .toggle .checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.container .card .toggle label {
+  position: relative;
+  border-radius: 50px;
+  padding: 5px;
+  margin: 0 10px;
+  width: 50px;
+  cursor: pointer;
+  padding: 8px;
+  background: var(--LightGrayishBlue);
+}
+.container .card .toggle label:hover,
+.container .card .toggle label:active {
+  background-color: var(--StrongCyan);
+}
+.container .card .toggle .ball {
+  background: var(--White);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  width: 22px;
+  height: 10px;
+  transition: transform 0.3s linear;
+}
+.container .card .name {
+  color: var(--DarkDesaturatedBlue);
+  white-space: nowrap;
+  font-size: medium;
+}
+.container .card .name span.discount {
+  color: var(--LightRed);
+  background-color: var(--LightGrayishRed);
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 30px;
+}
+.container .card hr {
+  margin: 1em -1em;
+  border: solid 0.5px var(--LightGrayishBlue);
+}
+.container .card ul {
+  list-style-type: none;
+}
+.container .card ul li:before {
+  content: "";
+  display: inline-block;
+  background: url("../images/icon-check.svg") no-repeat;
+  padding-right: 5px;
+  min-width: 10px;
+  min-height: 10px;
+}
+.container .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.container .bottom ul li {
+  text-align: left;
+}
+.container .slider {
+  width: 100%;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    var(--SoftCyan) 0%,
+    var(--SoftCyan) 50%,
+    var(--LightGrayishBlue) 0%,
+    var(--LightGrayishBlue) 100%
+  );
+}
+.container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--StrongCyan);
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container .slider::-webkit-slider-thumb:hover {
+  background-color: var(--SoftCyan);
+}
+
+.container .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.container .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*******************************/
+/** my classes*/
+.d-flex {
+  display: flex;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+}
+
+/**** sizes according to bootstrap ******/
+/**** **************************** *****/
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .desktop {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .desktop {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+}
