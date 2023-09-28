@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="container d-flex flex-dir-col align-center">
+      <header class="title">
+        <h2>Simple, traffic-based pricing</h2>
+        <div class="disc desktop">
+          Sign-up for our 30-day trial. No credit card required.
+        </div>
+
+        <div class="disc mob">
+          <p>Sign-up for our 30-day trial.</p>
+          <p>No credit card required.</p>
+        </div>
+      </header>
+      <div class="card">
+        <!-- packages div -->
+        <div class="packages d-flex align-center justify-evenly">
+          <p id="packageDesc">100k Pageviews</p>
+          <p class="price desktop">
+            <span class="num">16.00</span>
+            <span>/month</span>
+          </p>
+        </div>
+        <input
+          type="range"
+          name=""
+          id="slider"
+          class="slider"
+          min="0"
+          max="4"
+          value="2"
+        />
+
+        <p class="price mob">
+          <span class="num">16.00</span>
+          <span>/month</span>
+        </p>
+
+        <div class="toggle">
+          <div class="name">Monthly Billing</div>
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label d-flex align-center">
+            <div class="ball"></div>
+          </label>
+          <div class="name">
+            Yearly Billing
+            <span class="discount">
+              25% <span class="word desktop"> discount </span></span
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="bottom">
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <button class="btn">Start my trial</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </div>
+    <script src="script/index.js"></script>
+  </body>
+</html>
