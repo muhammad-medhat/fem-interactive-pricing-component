@@ -22,8 +22,77 @@
 body {
   font-family: "Manrope", sans-serif;
   font-size: 15px;
+  text-align: center;
 }
 
+.mob {
+  /* color: red;
+  font-weight: bold; */
+}
+.desktop {
+  /* color: green;
+  font-weight: bold; */
+  /* border: solid red; */
+  display: none;
+}
+/******* new styles **************************/
+
+/* compare****************** */
+.image-slider {
+  /* margin-left: 3rem; */
+  position: relative;
+  display: inline-block;
+  /* line-height: 0; */
+}
+
+.image-slider img {
+  border: solid red;
+  user-select: none;
+  min-width: 100%;
+}
+
+.image-slider > div {
+  position: absolute;
+  width: 25px;
+  max-width: 100%;
+  overflow: hidden;
+  resize: horizontal;
+}
+
+.image-slider > div:before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  overflow: hidden;
+  position: absolute;
+  resize: horizontal;
+  right: 3px;
+  bottom: 3px;
+  background-clip: content-box;
+  background: linear-gradient(-45deg, black 50%, transparent 0);
+  -webkit-filter: drop-shadow(0 0 2px black);
+  filter: drop-shadow(0 0 2px black);
+}
+.design {
+  display: none;
+}
+/***********************************************/
+main {
+  padding-top: 12em;
+  gap: 8em;
+}
+header {
+}
+header h2 {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  padding-bottom: 0.6em;
+}
+.disc {
+  font-size: 1.8em;
+}
+/*****************************************/
 main {
   background-image: url("../images/bg-pattern.svg");
   background-repeat: no-repeat;
@@ -34,17 +103,13 @@ main {
   color: var(--DarkDesaturatedBlue);
 }
 header {
-  padding: 3em;
+  padding: 2em;
   background-image: url("../images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-origin: padding-box;
-  background-size: contain;
   background-position-y: -10%;
 }
-
-/*********************************NEW***************/
-
 .container .card {
   background-color: var(--White);
   box-shadow: 0 5px 20px hsla(0, 0%, 0%, 0.2);

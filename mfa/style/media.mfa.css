@@ -1,0 +1,40 @@
+/**** sizes according to bootstrap ******/
+/**** **************************** *****/
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .bottom {
+    /* background-color: red; */
+  }
+  .card .packages {
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* .bottom ul li {
+    text-align: left;
+  } */
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card .packages {
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* .bottom ul li {
+    text-align: left;
+  } */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  .flex-xs-column {
+    flex-direction: column;
+  }
+  .name {
+    font-size: 0.5em;
+  }
+}
