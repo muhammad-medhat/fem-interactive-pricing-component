@@ -36,6 +36,7 @@ main {
   background-origin: border-box;
   background-size: contain;
   background-color: var(--VeryLightGrayishBlue);
+  /* background-color: var(--White); */
 
   color: var(--DarkDesaturatedBlue);
 }

@@ -4,6 +4,7 @@
   border-radius: 7px;
   padding: 2em;
   margin: 2em;
+  /* min-width: 90vw; */
 }
 
 .card .packages {
@@ -80,7 +81,7 @@
 .card .name {
   color: var(--DarkDesaturatedBlue);
   white-space: nowrap;
-  font-size: medium;
+  font-size: 1em;
 }
 .card .name span.discount {
   color: var(--LightRed);

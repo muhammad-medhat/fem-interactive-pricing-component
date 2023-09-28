@@ -12,6 +12,9 @@
   /* .bottom ul li {
     text-align: left;
   } */
+  .card {
+    max-width: 60vw;
+  }
 }
 
 /********** Medium devices only **********/
@@ -20,6 +23,10 @@
     justify-content: space-between;
     align-items: center;
   }
+  .card {
+    max-width: 60vw;
+  }
+
   /* .bottom ul li {
     text-align: left;
   } */
