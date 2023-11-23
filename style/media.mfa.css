@@ -13,7 +13,7 @@
     text-align: left;
   } */
   .card {
-    max-width: 60vw;
+    max-width: 35vw;
   }
 }
 
@@ -24,7 +24,7 @@
     align-items: center;
   }
   .card {
-    max-width: 60vw;
+    max-width: 35vw;
   }
 
   /* .bottom ul li {
